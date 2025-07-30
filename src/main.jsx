@@ -25,7 +25,7 @@ import { IntroAnimation } from "./components/index.js";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="" element={<Home />} />
+      <Route index element={<Home />} />
       <Route path="contact" element={<Contact />} />
       <Route path="active-rack" element={<ActiveRack />} />
       <Route path="passive-rack" element={<PassiveRack />} />
