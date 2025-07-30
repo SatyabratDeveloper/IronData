@@ -36,7 +36,10 @@ const router = createBrowserRouter(
       <Route path="partnership" element={<Partnership />} />
       <Route path="usps" element={<USPs />} />
     </Route>
-  )
+  ),
+  {
+    basename: "/IronData", // 👈 Add this line
+  }
 );
 
 createRoot(document.getElementById("root")).render(
