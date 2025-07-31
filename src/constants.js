@@ -352,8 +352,39 @@ export const ContactFormFields = [
     component: "input",
     required: false,
     rules: {
-      value: /^\+?[0-9\s\-().]{7,15}$/,
-      message: "Please enter a valid phone number",
+      pattern: {
+        value: /^\+?[0-9\s\-().]{7,15}$/,
+        message: "Please enter a valid phone number",
+      },
+    },
+  },
+  {
+    name: "formCategory",
+    label: "Form Category",
+    type: "select",
+    placeholder: "Select Category",
+    options: [
+      "Become a Partner",
+      "Join the Iron Network",
+      "Join the $IRON Waitlist",
+      "Download Concept Brief",
+      "Download Investor Pack",
+      "Get Investor Access Brief",
+      "Speak to Our Investment Team",
+      "For any other inquiries",
+    ],
+    icon: Settings,
+    required: true,
+    rules: {
+      required: "Category is required",
+      minLength: {
+        value: 3,
+        message: "Last Name must be at least 3 characters long",
+      },
+      maxLength: {
+        value: 100,
+        message: "Last Name must not exceed 100 characters",
+      },
     },
   },
   {
@@ -369,6 +400,17 @@ export const ContactFormFields = [
     ],
     icon: Settings,
     required: true,
+    rules: {
+      required: "Service is required",
+      minLength: {
+        value: 3,
+        message: "Last Name must be at least 3 characters long",
+      },
+      maxLength: {
+        value: 100,
+        message: "Last Name must not exceed 100 characters",
+      },
+    },
   },
   {
     name: "message",

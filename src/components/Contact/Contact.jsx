@@ -44,85 +44,83 @@ const Contact = () => {
   };
 
   return (
-    <div className="py-16">
-      <div className="flex justify-center items-center">
-        <Card className="bg-transparent py-0 justify-start">
-          <CardContentWrapper>
-            <CardHeader>
-              <CardDescription className="lg:text-nowrap">
-                Secure Your Connection — Contact Us Today
-              </CardDescription>
-            </CardHeader>
-          </CardContentWrapper>
-        </Card>
-      </div>
+    <div className="py-16 flex justify-center w-full">
+      <div className="w-full max-w-2xl mx-5 md:mx-0 p-5 sm:p-12 border border-gray-100 rounded-2xl shadow-2xl">
+        <h1 className="text-gray-900 text-2xl sm:text-3xl font-bold text-center pb-10">
+          <p className="mb-1">Secure Your Connection</p>
+          <p>Contact Us Today</p>
+        </h1>
 
-      <div className="sm:max-w-lg md:max-w-2xl mx-auto mt-7 px-6 sm:px-0">
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            {ContactFormFields.map((field) => {
-              return (
-                <FormField
-                  key={field.name}
-                  control={form.control}
-                  name={field.name}
-                  rules={field.rules}
-                  render={({ field: formField }) => (
-                    <FormItem>
-                      <FormLabel className="mb-0.5 flex items-center gap-2">
-                        {field.icon && (
-                          <field.icon className="size-4 text-primary" />
-                        )}
-                        <span>
-                          {field.label}
-                          {field.required && (
-                            <span className="text-red-500 ml-1">*</span>
-                          )}
-                        </span>
-                      </FormLabel>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+          >
+            {ContactFormFields.map((field) => (
+              <FormField
+                key={field.name}
+                control={form.control}
+                name={field.name}
+                rules={field.rules}
+                render={({ field: formField }) => (
+                  <FormItem
+                    className={field.type === "textarea" ? "sm:col-span-2" : ""}
+                  >
+                    <FormLabel>
+                      {field.label}
+                      {field.required && (
+                        <span className="text-red-400">*</span>
+                      )}
+                    </FormLabel>
 
-                      <FormControl>
-                        {field.type === "select" ? (
-                          <Select
-                            onValueChange={formField.onChange}
-                            value={formField.value}
-                          >
-                            <SelectTrigger>
-                              <SelectValue placeholder={field.placeholder} />
-                            </SelectTrigger>
-                            <SelectContent>
-                              {field.options?.map((option) => (
-                                <SelectItem key={option} value={option}>
-                                  {option}
-                                </SelectItem>
-                              ))}
-                            </SelectContent>
-                          </Select>
-                        ) : field.type === "textarea" ? (
-                          <Textarea
-                            placeholder={field.placeholder}
-                            {...formField}
-                            rows={field.rows || 3}
-                          />
-                        ) : (
-                          <Input
-                            type={field.type}
-                            placeholder={field.placeholder}
-                            {...formField}
-                          />
-                        )}
-                      </FormControl>
+                    <FormControl>
+                      {field.type === "select" ? (
+                        <Select
+                          onValueChange={formField.onChange}
+                          value={formField.value || ""}
+                        >
+                          <SelectTrigger>
+                            <SelectValue placeholder={field.placeholder} />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {field.options?.map((option) => (
+                              <SelectItem key={option} value={option}>
+                                {option}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      ) : field.type === "textarea" ? (
+                        <Textarea
+                          placeholder={field.placeholder}
+                          {...formField}
+                          rows={field.rows || 4}
+                        />
+                      ) : (
+                        <Input
+                          type={field.type}
+                          placeholder={field.placeholder}
+                          {...formField}
+                        />
+                      )}
+                    </FormControl>
 
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              );
-            })}
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            ))}
 
-            <Button type="submit" variant="default" size="lg">
-              Send Message
-            </Button>
+            <div className="sm:col-span-2">
+              <Button
+                type="submit"
+                variant="secondary"
+                size="lg"
+                className="w-full"
+              >
+                Submit
+              </Button>
+            </div>
           </form>
         </Form>
       </div>

@@ -18,31 +18,29 @@ const BreadcrumbNav = ({ pages }) => {
         location === "/data-center" || location === "/contact" ? "pb-10" : ""
       }`}
     >
-      {pages.map(({ href = "", name }) => (
-        <Breadcrumb key={name}>
-          <BreadcrumbList>
-            {href ? (
-              <>
-                <Link to={href}>
-                  <BreadcrumbItem>
-                    <BreadcrumbLink className="">
-                      {name === "Home" ? (
-                        <House className="size-4.5 mr-1.5" />
-                      ) : null}
+      <Breadcrumb>
+        <BreadcrumbList>
+          {pages.map(({ href = "", name }, idx) =>
+            href ? (
+              <div key={idx} className="flex gap-3 items-center">
+                <BreadcrumbItem>
+                  <BreadcrumbLink asChild>
+                    <Link to={href}>
+                      {name === "Home" && <House className="size-4.5 mr-1.5" />}
                       {name}
-                    </BreadcrumbLink>
-                  </BreadcrumbItem>
-                </Link>
+                    </Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
                 <BreadcrumbSeparator />
-              </>
+              </div>
             ) : (
-              <BreadcrumbItem>
-                <BreadcrumbPage className="">{name}</BreadcrumbPage>
+              <BreadcrumbItem key={idx}>
+                <BreadcrumbPage>{name}</BreadcrumbPage>
               </BreadcrumbItem>
-            )}
-          </BreadcrumbList>
-        </Breadcrumb>
-      ))}
+            )
+          )}
+        </BreadcrumbList>
+      </Breadcrumb>
     </div>
   );
 };

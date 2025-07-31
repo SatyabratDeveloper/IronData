@@ -38,7 +38,7 @@ const router = createBrowserRouter(
     </Route>
   ),
   {
-    basename: "/IronData", // 👈 Add this line
+    basename: "/IronData",
   }
 );
 

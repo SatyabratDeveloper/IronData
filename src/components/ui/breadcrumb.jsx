@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronRight, MoreHorizontal } from "lucide-react";
-
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 function Breadcrumb({ ...props }) {
   return <nav aria-label="breadcrumb" data-slot="breadcrumb" {...props} />;
@@ -32,7 +32,7 @@ function BreadcrumbItem({ className, ...props }) {
 }
 
 function BreadcrumbLink({ asChild, className, ...props }) {
-  const Comp = asChild ? Slot : "a";
+  const Comp = asChild ? Slot : Link;
 
   return (
     <Comp

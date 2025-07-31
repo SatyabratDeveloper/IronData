@@ -7,13 +7,13 @@ function Input({ className, type = "text", ...props }) {
       data-slot="input"
       className={cn(
         // Layout & Spacing
-        "flex w-full rounded-md border px-3 py-2 text-base md:text-sm",
+        "flex w-full rounded-md px-4 py-3 text-sm",
 
         // Background & Border
-        "bg-white dark:bg-neutral-900 border-gray-300 dark:border-neutral-700",
+        "border border-gray-300",
 
         // Text & Placeholder
-        "text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500",
+        "text-gray-900 placeholder:text-gray-400",
 
         // Disabled State
         "disabled:cursor-not-allowed disabled:opacity-50",
