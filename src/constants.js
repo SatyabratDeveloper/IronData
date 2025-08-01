@@ -288,11 +288,10 @@ export const BenefitsData = [
 
 export const ContactFormFields = [
   {
-    name: "firstName",
+    name: "First Name",
     label: "First Name",
     placeholder: "John",
     type: "text",
-    icon: User,
     component: "input",
     required: true,
     rules: {
@@ -308,11 +307,10 @@ export const ContactFormFields = [
     },
   },
   {
-    name: "lastName",
+    name: "Last Name",
     label: "Last Name",
     placeholder: "Doe",
     type: "text",
-    icon: User,
     component: "input",
     required: true,
     rules: {
@@ -328,11 +326,10 @@ export const ContactFormFields = [
     },
   },
   {
-    name: "email",
+    name: "Email",
     label: "Email",
     placeholder: "john.doe@example.com",
     type: "email",
-    icon: Mail,
     component: "input",
     required: true,
     rules: {
@@ -344,11 +341,10 @@ export const ContactFormFields = [
     },
   },
   {
-    name: "phone",
+    name: "Phone",
     label: "Phone",
     placeholder: "+91 12345-67890",
     type: "tel",
-    icon: Phone,
     component: "input",
     required: false,
     rules: {
@@ -359,8 +355,8 @@ export const ContactFormFields = [
     },
   },
   {
-    name: "formCategory",
-    label: "Form Category",
+    name: "Inquiry Type",
+    label: "Inquiry Type",
     type: "select",
     placeholder: "Select Category",
     options: [
@@ -373,23 +369,14 @@ export const ContactFormFields = [
       "Speak to Our Investment Team",
       "For any other inquiries",
     ],
-    icon: Settings,
     required: true,
     rules: {
-      required: "Category is required",
-      minLength: {
-        value: 3,
-        message: "Last Name must be at least 3 characters long",
-      },
-      maxLength: {
-        value: 100,
-        message: "Last Name must not exceed 100 characters",
-      },
+      required: "Inquiry Type is required",
     },
   },
   {
-    name: "serviceCategory",
-    label: "Service Category",
+    name: "Area of Interest",
+    label: "Area of Interest",
     type: "select",
     placeholder: "Select Service",
     options: [
@@ -398,26 +385,16 @@ export const ContactFormFields = [
       "Security and Compliance",
       "Automation & Intelligence",
     ],
-    icon: Settings,
     required: true,
     rules: {
-      required: "Service is required",
-      minLength: {
-        value: 3,
-        message: "Last Name must be at least 3 characters long",
-      },
-      maxLength: {
-        value: 100,
-        message: "Last Name must not exceed 100 characters",
-      },
+      required: "Area of Interest is required",
     },
   },
   {
-    name: "message",
+    name: "Message",
     label: "Message",
     type: "textarea",
     placeholder: "Enter your message...",
-    icon: MessageSquare,
     required: false,
   },
 ];
