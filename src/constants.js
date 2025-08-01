@@ -360,34 +360,14 @@ export const ContactFormFields = [
     type: "select",
     placeholder: "Select Category",
     options: [
-      "Become a Partner",
-      "Join the Iron Network",
-      "Join the $IRON Waitlist",
-      "Download Concept Brief",
-      "Download Investor Pack",
-      "Get Investor Access Brief",
-      "Speak to Our Investment Team",
+      "For Partnership",
+      "For Investors",
+      "For Web 3 Infrastructure",
       "For any other inquiries",
     ],
     required: true,
     rules: {
       required: "Inquiry Type is required",
-    },
-  },
-  {
-    name: "Area of Interest",
-    label: "Area of Interest",
-    type: "select",
-    placeholder: "Select Service",
-    options: [
-      "Infrastructure & Deployment",
-      "Energy Efficiency & Sustainability",
-      "Security and Compliance",
-      "Automation & Intelligence",
-    ],
-    required: true,
-    rules: {
-      required: "Area of Interest is required",
     },
   },
   {

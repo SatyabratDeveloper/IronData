@@ -14,8 +14,7 @@ import { ContactFormFields } from "../../constants";
 import { Loader2 } from "lucide-react";
 
 const initialSelectValues = {
-  formCategory: "",
-  serviceCategory: "",
+  inquiryType: "",
 };
 
 const Contact = () => {
