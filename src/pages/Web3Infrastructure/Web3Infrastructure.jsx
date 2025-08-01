@@ -17,7 +17,7 @@ import {
 import { BreadcrumbNav } from "../../components";
 
 const Web3Infrastructure = () => {
-  const pages = [{ name: "Home", href: "/" }, { name: "Web 3 Infrastructure" }];
+  const pages = [{ name: "Home", href: "/" }, { name: "Web 3 Coming" }];
 
   return (
     <>

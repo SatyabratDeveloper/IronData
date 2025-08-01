@@ -71,7 +71,7 @@ export const navItems = [
   },
   { id: 1, label: "MANAGED SERVICES", to: "/managed-services" },
   { id: 1, label: "FOR INVESTORS", to: "/investor" },
-  { id: 1, label: "WEB 3 INFRASTRUCTURE", to: "/web3-infrastructure" },
+  { id: 1, label: "WEB 3 COMING", to: "/web3-infrastructure" },
   { id: 1, label: "PARTNERSHIP", to: "/partnership" },
   { id: 1, label: "CONTACT US", to: "/contact" },
 ];

@@ -21,6 +21,7 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import { Button } from "@/components/ui/button";
+import { DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Menu, ChevronDown } from "lucide-react";
 import { navItems } from "../../constants";
 import logo from "../../assets/logo/image.png";
@@ -103,6 +104,12 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right">
               <SheetHeader>
+                <DialogTitle className="sr-only">
+                  Mobile Navigation Menu
+                </DialogTitle>
+                <DialogDescription className="sr-only">
+                  Browse menu items
+                </DialogDescription>
                 <Link to="/" className="">
                   <img className="h-12" src={logo} alt="Iron Data Logo" />
                 </Link>
