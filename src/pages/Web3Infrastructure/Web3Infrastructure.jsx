@@ -17,7 +17,7 @@ import {
 import { BreadcrumbNav } from "../../components";
 
 const Web3Infrastructure = () => {
-  const pages = [{ name: "Home", href: "/" }, { name: "Web 3 Coming" }];
+  const pages = [{ name: "Home", href: "/" }, { name: "Web 3 is Coming" }];
 
   return (
     <>
@@ -41,18 +41,6 @@ const Web3Infrastructure = () => {
                 not centralized.
               </p>
             </CardContent>
-
-            <div className="mt-6 flex flex-wrap justify-center gap-4">
-              <Button asChild variant="default" size="lg">
-                <Link to="/contact">Join the $IRON Waitlist</Link>
-              </Button>
-              <Button asChild variant="secondary" size="lg">
-                <Link to="/contact">Become a Partner</Link>
-              </Button>
-              <Button asChild variant="ghost" size="lg">
-                <Link to="/contact">Download Concept Brief</Link>
-              </Button>
-            </div>
           </CardContentWrapper>
         </Card>
       </div>
