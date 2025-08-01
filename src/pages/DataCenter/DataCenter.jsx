@@ -13,7 +13,7 @@ import {
   deliveryModel,
   fullStackDataCenterServer,
 } from "../../constants";
-import { BreadcrumbNav, FeatureCard } from "../../components";
+import { BreadcrumbNav, FeatureCard, SEO } from "../../components";
 import WhyChooseUsImage from "../../assets/images/choose.jpg";
 
 const DataCenter = () => {
@@ -21,7 +21,18 @@ const DataCenter = () => {
 
   return (
     <>
+      {/* SEO Tag */}
+      <SEO
+        title="GPU-Ready AI Data Center | IRON DATA VAULTS"
+        description="IRON DATA VAULTS offers next-gen data centers built for AI, LLMs, and HPC — with GPU-ready racks, liquid cooling, and high-density compute infrastructure."
+        keywords="AI data center, GPU servers, LLM hosting, high performance compute, immersion cooling, India AI cloud"
+        canonical="https://irondatavaults.com/data-center"
+        ogImage="https://irondatavaults.com/image.png"
+      />
+
+      {/* Breadcrumb Nav */}
       <BreadcrumbNav pages={pages} />
+
       <div className="bg-card py-16">
         <div className="flex justify-center items-center">
           <Card className="py-0 justify-start">

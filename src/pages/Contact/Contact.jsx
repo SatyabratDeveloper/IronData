@@ -1,14 +1,11 @@
-import { BreadcrumbNav, Contact as ContactComp } from "../../components";
+import { BreadcrumbNav, Contact as ContactComp, SEO } from "../../components";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-  CardImage,
   CardContentWrapper,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -16,6 +13,15 @@ const Contact = () => {
   const pages = [{ name: "Home", href: "/" }, { name: "Contact Us" }];
   return (
     <>
+      {/* SEO Tag */}
+      <SEO
+        title="Contact IRON DATA VAULTS | Secure Data Infrastructure Solutions"
+        description="Reach out to IRON DATA VAULTS for data centre partnerships, investor inquiries, or Web3-ready infrastructure solutions. Our team is ready to assist you with secure, scalable, and tailored hosting services."
+        keywords="contact iron data vaults, data center india contact, secure storage solutions, investor inquiries, partnership contact, GPU cloud India, Web3 infrastructure support"
+        canonical="https://irondatavaults.com/contact"
+        ogImage="https://irondatavaults.com/image.png"
+      />
+      {/* Breadcrumb Nav */}
       <BreadcrumbNav pages={pages} />
       <div className="py-16 bg-accent">
         <div className="flex justify-center items-center mb-7">

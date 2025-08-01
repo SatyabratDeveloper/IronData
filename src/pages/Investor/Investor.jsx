@@ -16,13 +16,23 @@ import {
   CardContentWrapper,
 } from "@/components/ui/card";
 import { CircleCheckBig } from "lucide-react";
-import { BreadcrumbNav } from "../../components";
+import { BreadcrumbNav, SEO } from "../../components";
 
 const Investor = () => {
   const pages = [{ name: "Home", href: "/" }, { name: "For Investors" }];
 
   return (
     <>
+      {/* SEO Tag */}
+      <SEO
+        title="Invest in India's Data Infrastructure | IRON DATA VAULTS"
+        description="Explore high-yield investment opportunities in India's growing digital infrastructure sector. Partner with IRON DATA VAULTS for data centre ROI, joint ventures, vault ownership, ESG-aligned assets, and more."
+        keywords="data center investment India, digital infrastructure ROI, ESG infrastructure, colocation investment, vault ownership, joint venture data centre, Iron Data Vaults investor"
+        canonical="https://irondatavaults.com/investor"
+        ogImage="https://irondatavaults.com/image.png"
+      />
+
+      {/* Breadcrumb Nav */}
       <BreadcrumbNav pages={pages} />
 
       {/* Header */}

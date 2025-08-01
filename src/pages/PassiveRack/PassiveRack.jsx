@@ -11,7 +11,7 @@ import {
   CardContentWrapper,
 } from "@/components/ui/card";
 import { passiveRackFeatures } from "../../constants";
-import { BreadcrumbNav, FeatureCard } from "../../components";
+import { BreadcrumbNav, FeatureCard, SEO } from "../../components";
 import { CircleCheckBig, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,18 @@ const PassiveRack = () => {
 
   return (
     <>
+      {/* SEO Tag */}
+      <SEO
+        title="Passive Rack Colocation Solutions | IRON DATA VAULTS"
+        description="Secure, cost-efficient colocation for non-powered and low-power IT equipment. Ideal for patch panels, fiber management, and passive infrastructure needs."
+        keywords="passive rack, colocation, low power IT equipment, patch panels, fiber management, passive data center, passive networking, Iron Data Vaults"
+        canonical="https://irondatavaults.com/passive-rack"
+        ogImage="https://irondatavaults.com/image.png"
+      />
+
+      {/* Breadcrumb Nav */}
       <BreadcrumbNav pages={pages} />
+
       <div className="flex justify-center items-center py-8">
         <Card className="items-center">
           <CardContentWrapper className="">

@@ -7,17 +7,26 @@ import {
   CardImage,
   CardContentWrapper,
 } from "@/components/ui/card";
-import { FeatureCard, BreadcrumbNav } from "../../components";
+import { FeatureCard, BreadcrumbNav, SEO } from "../../components";
 import { Usps, additionalUSPs } from "../../constants";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const USPs = () => {
   const pages = [{ name: "Home", href: "/" }, { name: "USPs" }];
 
   return (
     <>
+      {/* SEO Tag */}
+      <SEO
+        title="USPs of IRON DATA VAULTS | Own Your Data Center, Own Your Data"
+        description="Explore the unmatched USPs of IRON DATA VAULTS – from sovereign data ownership and GPU-ready infrastructure to dual-site redundancy and full hardware transparency. Empower your digital infrastructure with enterprise-grade, future-ready colocation."
+        keywords="data center USPs, sovereign hosting India, Iron Data Vaults features, dedicated server hosting, colocation India, secure data center, GPU colocation, hybrid hosting, bare-metal servers, dual-site data center"
+        canonical="https://irondatavaults.com/usps"
+        ogImage="https://irondatavaults.com/image.png"
+      />
+
+      {/* Breadcrumb Nav */}
       <BreadcrumbNav pages={pages} />
+
       <div className="py-16">
         <div className="flex justify-center items-center mb-7">
           <Card className="bg-transparent py-0 justify-start">

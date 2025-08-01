@@ -14,6 +14,7 @@ import BreadcrumbNav from "./BreadcrumbNav/BreadcrumbNav.jsx";
 import ScrollToTop from "./ScrollToTop/ScrollToTop.jsx";
 import IntroAnimation from "./IntroAnimation/IntroAnimation.jsx";
 import WhatsappChat from "./WhatsappChat/WhatsappChat.jsx";
+import SEO from "./SEO/SEO.jsx";
 
 export {
   Header,
@@ -32,4 +33,5 @@ export {
   ScrollToTop,
   IntroAnimation,
   WhatsappChat,
+  SEO,
 };

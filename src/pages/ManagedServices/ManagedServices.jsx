@@ -1,5 +1,5 @@
 import { managedServices } from "../../constants";
-import { BreadcrumbNav, FeatureCard, WhyChooseUs } from "../../components";
+import { BreadcrumbNav, FeatureCard, WhyChooseUs, SEO } from "../../components";
 import {
   Card,
   CardContent,
@@ -15,7 +15,18 @@ const ManagedServices = () => {
 
   return (
     <>
+      {/* SEO Tag */}
+      <SEO
+        title="Managed IT Services in India | IRON DATA VAULTS"
+        description="IRON DATA VAULTS offers comprehensive managed services including 24/7 IT support, network management, cloud integration, and disaster recovery—helping businesses scale securely and efficiently."
+        keywords="managed IT services India, colocation support, cloud integration, remote hands, backup and recovery, IT infrastructure management, network monitoring, patch management, Iron Data Vaults"
+        canonical="https://irondatavaults.com/managed-services"
+        ogImage="https://irondatavaults.com/image.png"
+      />
+
+      {/* Breadcrumb Nav */}
       <BreadcrumbNav pages={pages} />
+      
       <div className="flex justify-center items-center pt-8">
         <Card className="items-center">
           <CardContentWrapper className="">

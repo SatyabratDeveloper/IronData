@@ -14,14 +14,25 @@ import {
   CardImage,
   CardContentWrapper,
 } from "@/components/ui/card";
-import { BreadcrumbNav } from "../../components";
+import { BreadcrumbNav, SEO } from "../../components";
 
 const Web3Infrastructure = () => {
   const pages = [{ name: "Home", href: "/" }, { name: "Web 3 is Coming" }];
 
   return (
     <>
+      {/* SEO Tag */}
+      <SEO
+        title="Web3 is Coming | Tokenized AI Data Centers by IRON DATA VAULTS"
+        description="IRON DATA VAULTS is building India’s first token-ready, AI-powered data center. Stake, earn, and govern real infrastructure through the $IRON token. Decentralized ownership meets enterprise-grade performance."
+        keywords="Web3 data center, tokenized infrastructure, AI data center India, decentralized data center, Iron token, Web3 colocation, GPU hosting token, $IRON token, Dehradun data center, DAO-based infrastructure"
+        canonical="https://irondatavaults.com/web3"
+        ogImage="https://irondatavaults.com/image.png"
+      />
+
+      {/* Breadcrumb Nav */}
       <BreadcrumbNav pages={pages} />
+
       <div className="flex justify-center items-center pt-8">
         <Card className="items-center">
           <CardContentWrapper className="">

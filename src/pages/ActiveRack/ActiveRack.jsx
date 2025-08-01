@@ -10,7 +10,7 @@ import {
   CardContentWrapper,
 } from "@/components/ui/card";
 import { activeRackFeatures } from "../../constants";
-import { FeatureCard, BreadcrumbNav } from "../../components";
+import { FeatureCard, BreadcrumbNav, SEO } from "../../components";
 import { CircleCheckBig } from "lucide-react";
 
 const ActiveRack = () => {
@@ -18,7 +18,18 @@ const ActiveRack = () => {
 
   return (
     <>
+      {/* SEO Tag */}
+      <SEO
+        title="Colocation Active Rack Solutions | IRON DATA VAULTS"
+        description="Secure, high-performance, and scalable rack space in a carrier-neutral data center. Ideal for enterprise colocation, hybrid cloud, and latency-sensitive deployments."
+        keywords="active rack, colocation, hybrid cloud, data center India, high-frequency trading servers, server colocation, disaster recovery, backup hosting"
+        canonical="https://irondatavaults.com/active-rack"
+        ogImage="https://irondatavaults.com/image.png"
+      />
+
+      {/* Breadcrumb Nav */}
       <BreadcrumbNav pages={pages} />
+
       <div className="flex justify-center items-center py-8">
         <Card className="items-center">
           <CardContentWrapper className="">

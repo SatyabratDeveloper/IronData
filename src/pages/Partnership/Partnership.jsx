@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { BreadcrumbNav } from "../../components";
+import { BreadcrumbNav, SEO } from "../../components";
 import {
   Card,
   CardContent,
@@ -19,8 +19,19 @@ import Racks from "../../assets/images/partnership/racks.jpg";
 
 const Partnership = () => {
   const pages = [{ name: "Home", href: "/" }, { name: "Partnership" }];
+
   return (
     <>
+      {/* SEO Tag */}
+      <SEO
+        title="Data Center Partnership in India | Join the IRON NETWORK"
+        description="Partner with IRON DATA VAULTS and become part of India’s first federated, GPU-ready data center network. Co-invest, co-brand, or list your facility to unlock national reach, client access, and infrastructure monetization."
+        keywords="data center partnership India, IRON NETWORK, data center co-investment, GPU colocation, federated data centers, data center listing, white-label hosting, modular data centers, Iron partner network"
+        canonical="https://irondatavaults.com/partnership"
+        ogImage="https://irondatavaults.com/image.png"
+      />
+
+      {/* Breadcrumb Nav */}
       <BreadcrumbNav pages={pages} />
 
       {/* Hero Section */}
