@@ -34,7 +34,7 @@ const Partnership = () => {
                 size="lg"
                 className="hidden lg:inline"
               >
-                <Link to="/usps">Partner With Us</Link>
+                <Link to="/partnership">Partner With Us</Link>
               </Button>
             </CardContent>
           </CardContentWrapper>
@@ -43,8 +43,8 @@ const Partnership = () => {
             alt="About_image"
             className="w-76 lg:w-100 xl:w-68 place-self-center"
           />
-          <div className="text-center mt-8 tracking-wide">
-            <Button asChild variant="secondary" size="lg" className="lg:hidden">
+          <div className="text-center mt-8 tracking-wide lg:hidden">
+            <Button asChild variant="secondary" size="lg">
               <Link to="/partnership">Partner With Us</Link>
             </Button>
           </div>
